@@ -1,0 +1,404 @@
+body {
+    background-color: rgb(255, 255, 255);
+}
+
+.title {
+    padding: 30px;
+    text-align: center;
+    margin-top: 120px;
+    margin-bottom: -30px;
+}
+
+.img1 {
+    width: 132px;
+    height: 110px;
+    margin-top: 20px;
+    padding-right: 40px;
+}
+
+.img2 {
+    padding: 2px;
+    height: 98%;
+    width: 98%;
+    object-fit: contain;
+}
+
+.theme {
+    position: fixed;
+    width: 100%;
+    z-index: 9;
+    padding-top: 30px;
+    padding-bottom: 15px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.theme__btn--red,.theme__btn--blue,.theme__btn--white {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+button.theme__btn--blue{
+    background-color: rgb(115, 160, 243);
+    color: chartreuse;
+}
+
+button.theme__btn--white{
+    background-color: rgb(255, 255, 255);
+    color: black;
+}
+
+button.theme__btn--red {
+    background-color: rgb(238, 156, 156); 
+    color: #000;
+} */
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.switch input {
+    display: none;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked + .slider {
+    background-color: #2196F3;
+}
+
+input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+.btn {
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+input[type=text] {
+    width: 20%;
+    padding: 20px;
+    border: 1.2px solid #ccc;
+    border-radius: 10px;
+    box-sizing: border-box;
+    font-size: 20px;
+    text-align:center;
+}
+
+.button {
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.minibtn {
+    border: none;
+    color: white;
+    padding: 4px 12px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 13px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border-radius: 10px;
+    margin-left: 6px;
+}
+
+.button2 {
+    background-color: white;
+    color: black;
+    border: 2px solid #008CBA;
+    width: 160px;
+    text-align: center;
+}
+
+.button2:hover {
+    background-color: #008CBA;
+    color: white;
+}
+
+.main {
+    border: 2px solid black;
+    border-radius: 10px;
+    width: 100%;
+    height: 690px;
+    margin: auto;
+}
+
+.menu {
+    background-color: none;
+    width: 600px;
+    height: 200px;
+    margin: auto;
+    margin-top: 40px;
+}
+
+.other {
+    padding-top: 20px;
+    background-color: none;
+    width: 800px;
+    height: 240px;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.panel {
+    background-color: white;
+    border: 2px solid black;
+    width: 180px;
+    height: 180px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.preference {
+    background-color: white;
+    border: 2px solid black;
+    width: 180px;
+    height: 180px;
+}
+
+.block:not(#expected) {
+    background-color: white;
+    width: 180px;
+    height: 180px;
+    float: left;
+    margin-left: 10px;
+    margin-top: 10px;
+    transition: 1s; /* Время эффекта */
+}
+
+.block:not(#expected):hover {
+transform: scale(1.2); /* Увеличиваем масштаб */
+}
+
+.text {
+    font-size: 16px;
+    padding: 6px;
+    margin-left: 10px;
+}
+
+.text1 {
+    font-size: 20px;
+    margin-left: 30px;
+    margin-top: 5px;
+}
+
+
+.progressbar {
+    width: 90%;
+    margin: 8px auto;
+    border: solid 1px #000;
+}
+
+.progressbar .inner {
+    height: 16px;
+    animation: progressbar-countdown;
+    animation-duration: 40s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-play-state: paused;
+    animation-timing-function: linear;
+}
+
+@keyframes progressbar-countdown {
+    0% {
+        width: 100%;
+        background: rgb(255, 196, 0);
+    }
+
+    100% {
+        width: 0%;
+        background: rgb(241, 24, 24);
+    }
+}
+
+#autoriz {
+    display: block;
+}
+
+#game {
+    display: none;
+    margin-top: 120px;
+}
+
+#menu {
+    display: none;
+}
+
+#ratings {
+    display: none;
+}
+
+#main-game {
+    display: none;
+}
+
+.pre-start{
+    display: none;
+}
+
+.pre-start-wrap {
+    display: flex;
+    flex-direction: column;
+}
+
+.pre-start-hard {
+    display: none;
+}
+
+.hider{
+    display: flex;
+    position: absolute;
+    width: 100%;
+    height: 690px;
+    background-color: rgb(112, 83, 83);
+    color: rgb(207, 119, 57);
+    font-size: 32px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+    border: 2px solid black;
+    border-radius: 10px;
+    margin: auto;
+}
+
+.interface {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 130px;
+    margin-bottom: 10px;
+}
+
+#popup-lose {
+    display: none;
+}
+
+#popup-win {
+    display: none;
+}
+
+.b-popup{
+    width: 99.3%;
+    height: 690px;
+    background-color: rgba(0,0,0,0.7);
+    overflow: hidden;
+    position: fixed;
+    z-index: 1000;
+    border-radius: 10px;
+    margin: auto;
+    margin-top: 2px;
+}
+.b-popup .b-popup-content{
+    margin: 150px auto 0px auto;
+    width: 1000px;
+    font-size: 80px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    background-color: #c5c5c5;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px #000;
+}
+
+.text__attempt{
+    position: absolute;
+    display: none;
+    bottom: 0;
+    left: 45%;
+    font-size: 50px;
+}
+
+h3.fail{
+    color: rgb(251, 255, 0);
+    display: flex;
+    animation: movetext 0.8s;
+
+}
+
+h3.over{
+    color: rgb(255, 17, 0);
+    display: flex;
+    animation: movetext 0.8s;
+
+}
+
+h3.right{
+  color: green;
+  display: flex;
+  animation: movetext 0.8s;
+}
+
+@keyframes movetext {
+    0% {bottom: 0px;}
+    50% {bottom: 300px;}
+    100% {bottom: 400px;}
+}

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf8'>
+    <title>Игра</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <h3 class="text__attempt text__attempt--fail">Ошибка!</h3>
+    <h3 class="text__attempt text__attempt--right">Правильно!</h3>
+    <h3 class="text__attempt text__attempt--over">Конец игры!</h3>
+
+    <div class='theme'>
+        <label class="switch">
+            <button class="red theme__btn--red"></button>
+            <button class="blue theme__btn--blue"></button>
+            <button class="white theme__btn--white selected"></button>
+        </label>
+    </div>
+
+    <div class="pre-start">
+        <div class="pre-start-wrap">
+            <div>Поехали!<br>У вас есть 3 жизни<br></div>
+            <div style="color: rgb(165, 34, 34);">Выберите только 1 картинку за раунд</div>
+        </div>
+    </div>
+    <div class="pre-start-hard">
+        <div class="pre-start-hard-wrap">
+            <div>Поехали!<br>У вас есть 2 жизни<br></div>
+            <div style="color: rgb(165, 34, 34);">Выберите все верные картинки за раунд</div>
+        </div>
+    </div>
+    <div class="b-popup" id="popup-lose">
+        <div class="b-popup-content">
+            <div class="b-popup-text" id="popup-text"></div>
+            <div>
+                <button class="minibtn button2" id='restart2'>Заново</button>
+                <button class="minibtn button2" id='return3'>Меню</button>
+            </div>
+        </div>
+    </div>
+    <div class="b-popup" id="popup-win">
+        <div class="b-popup-content">
+            <div class="b-popup-text" id="popup-text-win"></div>
+            <div>
+                <button class="minibtn button2" id='level2'>Следующий уровень</button>
+                <button class="minibtn button2" id='return4'>Меню</button>
+            </div>
+        </div>
+    </div>
+
+    <div class='main' id='autoriz'>
+        <div class='title'>
+            <h1>Как вас зовут?</h1>
+        </div>
+        <div style='clear:both; padding:25px; text-align: center;'>
+            <input type="text" id="fname" placeholder="Ваше имя" autocomplete="off">
+        </div>
+        <div class='btn'>
+            <button class="button button2" id='join'>Продолжить</button>
+        </div>
+    </div>
+    <div class='main' id='menu'>
+        <div class='title'>
+            <h1 id="name"></h1>
+        </div>
+        <div class='btn' style='clear:both; padding-top:25px;'>
+            <button class="button button2" id='start-easy'>Легкий уровень</button>
+        </div>
+        <div class='btn'>
+            <button class="button button2" id='start-hard'>Хард уровень</button>
+        </div>
+        <div class='btn'>
+            <button class="button button2" id='rating'>Рейтинг</button>
+        </div>
+        <div class='btn'>
+            <button class="button button2" id='exit'>Выйти</button>
+        </div>
+    </div>
+    <div class="main" id='main-game'>
+        <div id='game'>
+            <div class='interface'>
+                <div class="preference">
+                    <div class='text' id='textScore'></div>
+                    <div class='text' id='countErrors'></div>
+                    <div class='text' id='textTime'>Осталось времени:</div>
+                    <div id='progressbar1'></div>
+                </div>
+                <div class='block' id='expected' style='margin-top:0px;'></div>
+                <div class='panel'>
+                    <div class='text' id='textLvl'></div>
+                    <div style="float:left; padding:5px;">
+                        <button class="minibtn button2" id='restart'>Заново</button>
+                    </div>
+                    <div style="float:left; padding:5px;">
+                        <button class="minibtn button2" id='return2'>Меню</button>
+                    </div>
+                </div>
+            </div>
+            <div class='other'>
+                <div class='block' id='block00'></div>
+                <div class='block' id='block01'></div>
+                <div class='block' id='block02'></div>
+                <div class='block' id='block03'></div>
+        
+                <div class='block' id='block10'></div>
+                <div class='block' id='block11'></div>
+                <div class='block' id='block12'></div>
+                <div class='block' id='block13'></div>
+            </div>
+        </div>
+    </div>
+    <div class='main' id='ratings'>
+        <div class='title'>
+            <h1>Рейтинг</h1>
+        </div>
+        <div style='clear:both; margin-left: 43.5%;' id='tableRating'>
+        </div>
+        <div class='btn'>
+            <button class="button button2" id='score__clear'>Очистить</button>
+            <button class="button button2" id='return'>Назад</button>
+        </div>
+    </div>
+</body>
+</html>
